@@ -3,7 +3,7 @@ Textformater for ProcessWire fields that allows you to use image fields inside m
 
 ## To apply it to a field
 
-Add the textformater **after** the markup language textformatter (Markdown or Textile)
+Add the textformater **AFTER** the markup language textformatter (Markdown or Textile)
 
 ## To use it inside the text area
 
