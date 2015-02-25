@@ -15,6 +15,8 @@ show second image from the field called "images" with and alt text of "overridin
 
 `![overriding alt text](images:2)`
 
+--
+
 show all images from the field called "images" with their descriptions as the alt text:
 
 `![](images:0)`
