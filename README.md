@@ -12,9 +12,11 @@ Simply use the normal image tags from the Markup language that you're writting o
 ## Examples:
 
 show second image from the field called "images" with and alt text of "overriding alt text":
+
 `![overriding alt text](images:2)`
 
 show all images from the field called "images" with their descriptions as the alt text:
+
 `![](images:0)`
 
 
