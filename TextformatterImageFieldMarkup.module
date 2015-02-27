@@ -107,6 +107,7 @@ class TextformatterImageFieldMarkup extends Textformatter {
             }
         }
         // return the our modified html
-        $str = $dom->saveHTML();
+        $str = $dom->saveHTML($dom->getElementsByTagName('body')->item(0));
+        $str = ltrim(rtrim($str,'</body>'),'<body>');
     }
 }
