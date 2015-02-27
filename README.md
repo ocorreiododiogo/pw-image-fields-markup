@@ -21,5 +21,13 @@ show all images from the field called "images" with their descriptions as the al
 
 `![](images:0)`
 
+--
+
+do the same with Textile:
+
+`!images:2(overriding alt text)!`
+
+`!images:0!`
+
 
 
