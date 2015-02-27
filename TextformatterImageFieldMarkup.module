@@ -7,7 +7,7 @@ class TextformatterImageFieldMarkup extends Textformatter {
 			'title' => 'Image fields Markup', 
 			'version' => 100, 
 			'summary' => "Allows you to use image fields inside markup languages, notably, Markdown and Textile in Processwire text fields",
-			'href' => '',
+			'href' => 'https://processwire.com/talk/topic/9192-textformatter-image-fields-markup/',
 		); 
 	}
 
@@ -21,6 +21,7 @@ class TextformatterImageFieldMarkup extends Textformatter {
         $images = $dom->getElementsByTagName('img');
         
         foreach ($images as $image) {
+            
             
             // get needed attributes with DOMDocument
             $src = $image->getAttribute('src');
@@ -38,6 +39,9 @@ class TextformatterImageFieldMarkup extends Textformatter {
                 
                 // the field name is the first element
                 $field = $this->page->$exploded[0];
+                
+                // if this field doesn't exist continue
+                if(!field) continue;
                 
                 // the position is the second element
                 $number = $exploded[1];
@@ -81,7 +85,11 @@ class TextformatterImageFieldMarkup extends Textformatter {
                             // set image url
                             $newimage->setAttribute('src', $img->url);
                             // if alt is not defined manualy, get the image description
-                            if(!$alt) $newimage->setAttribute('alt', $img->description);
+                            if(!$alt) { 
+                                $newimage->setAttribute('alt', $img->description);
+                            } else {
+                                $newimage->setAttribute('alt', $alt);
+                            }
                             
                             // this image will be the previous in the next iteraction
                             $previmage = $newimage; 
