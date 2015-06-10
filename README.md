@@ -1,6 +1,8 @@
 # pw-image-fields-markup
 Textformater for ProcessWire fields that allows you to use image fields inside markup languages, notably, Markdown and Textile in Processwire text fields
 
+http://modules.processwire.com/modules/textformatter-image-field-markup/
+
 ## To apply it to a field
 
 Add the textformater **AFTER** the markup language textformatter (Markdown or Textile)
