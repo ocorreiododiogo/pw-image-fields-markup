@@ -14,8 +14,8 @@ class TextformatterImageFieldMarkup extends Textformatter {
     public function format(&$str) {
         
         // start a new DOMDocument with our content
-		$dom = new DOMDocument('1.0','UTF-8');
-        $dom->loadHTML($str);
+	$dom = new DOMDocument();
+       $dom->loadHTML('<?xml encoding="UTF-8">' . $str);
         
         // find all images
         $images = $dom->getElementsByTagName('img');
