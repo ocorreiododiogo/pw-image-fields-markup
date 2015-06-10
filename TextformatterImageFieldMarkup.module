@@ -5,7 +5,7 @@ class TextformatterImageFieldMarkup extends Textformatter {
 	public static function getModuleInfo() {
 		return array(
 			'title' => 'Image fields Markup', 
-			'version' => 101, 
+			'version' => 102, 
 			'summary' => "Allows you to use image fields inside markup languages, notably, Markdown and Textile in Processwire text fields",
 			'href' => 'https://processwire.com/talk/topic/9192-textformatter-image-fields-markup/',
 		); 
