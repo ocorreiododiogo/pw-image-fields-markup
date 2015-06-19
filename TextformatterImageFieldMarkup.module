@@ -41,7 +41,7 @@ class TextformatterImageFieldMarkup extends Textformatter {
                 $field = $this->page->$exploded[0];
                 
                 // if this field doesn't exist continue
-                if(!field) continue;
+                if(!$field) continue;
                 
                 // the position is the second element
                 $number = $exploded[1];
