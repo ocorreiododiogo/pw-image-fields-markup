@@ -38,7 +38,7 @@ class TextformatterImageFieldMarkup extends Textformatter {
                 $exploded = explode(":",$src);
                 
                 // the field name is the first element
-                $field = $this->page->$exploded[0];
+                $field = $this->page->get($exploded[0]);
                 
                 // if this field doesn't exist continue
                 if(!$field) continue;
