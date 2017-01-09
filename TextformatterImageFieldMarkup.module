@@ -12,9 +12,12 @@ class TextformatterImageFieldMarkup extends Textformatter {
 	}
 
     public function format(&$str) {
+
+        // do nothing if given string is empty
+        if(empty($str)) return;
         
         // start a new DOMDocument with our content
-	$dom = new DOMDocument();
+	    $dom = new DOMDocument();
         $dom->loadHTML(mb_convert_encoding($str, 'HTML-ENTITIES', 'UTF-8'));
         
         // find all images
